@@ -4,7 +4,4 @@
 - Scroll proof of concept of TableView: scroll to determined section
 - Scroll proof of concept of CollectionView: center horizontally tapped item
 
-   <img src="https://user-images.githubusercontent.com/46940447/187583708-84284111-8a04-4661-bd87-9bfa52a461f4.gif" width="25%" height="25%"/>
-
-
-
+   <img src="https://user-images.githubusercontent.com/46940447/187587256-35dce2e1-6cf4-47b2-ba88-73e6623d0226.gif" width="25%" height="25%"/>
