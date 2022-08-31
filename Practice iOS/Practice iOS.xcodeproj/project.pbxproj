@@ -111,10 +111,10 @@
 		D5342E7528BEED2E00360C31 /* Practice iOS */ = {
 			isa = PBXGroup;
 			children = (
+				D5342EB728BF051800360C31 /* Resources */,
 				D5342EA628BEF46300360C31 /* ViewControllers */,
 				D5342E7628BEED2E00360C31 /* AppDelegate.swift */,
 				D5342E7828BEED2E00360C31 /* SceneDelegate.swift */,
-				D5342E7F28BEED3000360C31 /* Assets.xcassets */,
 				D5342E8128BEED3000360C31 /* LaunchScreen.storyboard */,
 				D5342E8428BEED3000360C31 /* Info.plist */,
 			);
@@ -141,9 +141,9 @@
 		D5342EA628BEF46300360C31 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				D5342EA728BEF48500360C31 /* Scrollable */,
 				D5342E7A28BEED2E00360C31 /* RootViewController.swift */,
 				D5342E7C28BEED2E00360C31 /* Main.storyboard */,
+				D5342EA728BEF48500360C31 /* Scrollable */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -151,10 +151,10 @@
 		D5342EA728BEF48500360C31 /* Scrollable */ = {
 			isa = PBXGroup;
 			children = (
+				D5342EA828BEF4A800360C31 /* ScrollableViewController.swift */,
+				D5342EB628BF050200360C31 /* Models */,
 				D5342EB128BEF9B700360C31 /* CollectionViewCell */,
 				D5342EB028BEF9AC00360C31 /* TableViewCell */,
-				D5342EA828BEF4A800360C31 /* ScrollableViewController.swift */,
-				D5342EAA28BEF63600360C31 /* ScrollableModel.swift */,
 			);
 			path = Scrollable;
 			sourceTree = "<group>";
@@ -175,6 +175,22 @@
 				D5342EB328BEF9CA00360C31 /* CollectionViewCell.xib */,
 			);
 			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		D5342EB628BF050200360C31 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D5342EAA28BEF63600360C31 /* ScrollableModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D5342EB728BF051800360C31 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D5342E7F28BEED3000360C31 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

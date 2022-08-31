@@ -7,19 +7,22 @@
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
+public class TableViewCell: UITableViewCell {
 
-    @IBOutlet var contentLabel: UILabel!
+    // MARK: - Outlets
+    @IBOutlet private var contentLabel: UILabel!
     
-    override func awakeFromNib() {
+    // MARK: - Initialization
+    override public func awakeFromNib() {
         super.awakeFromNib()
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
+    override public func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         selectionStyle = .none
     }
     
+    // MARK: - Public
     public func configure(with model: SectionContentModel) {
         contentLabel.text = model.content
     }

@@ -10,14 +10,15 @@ import UIKit
 class ScrollableViewController: UIViewController {
 
     // MARK: - Outlets
-    @IBOutlet var collectionView: UICollectionView!
-    @IBOutlet var tableView: UITableView!
+    @IBOutlet private var collectionView: UICollectionView!
+    @IBOutlet private var tableView: UITableView!
     
     // MARK: - Properties
-    var dataSource: [ScrollableModel] = []
-    var tableCellIdentifier: String = "tableCellIdentifier"
-    var collectionCellIdentifier: String = "collectionCellIdentifier"
+    private var dataSource: [ScrollableModel] = []
+    private var tableCellIdentifier: String = "tableCellIdentifier"
+    private var collectionCellIdentifier: String = "collectionCellIdentifier"
 
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         createModel()
@@ -25,6 +26,7 @@ class ScrollableViewController: UIViewController {
         configureCollectionView()
     }
     
+    // MARK: - Private
     private func configureTableView() {
         let nib = UINib(nibName: "TableViewCell", bundle: nil)
         tableView.delegate = self

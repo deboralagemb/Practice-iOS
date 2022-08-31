@@ -7,18 +7,20 @@
 
 import UIKit
 
-class CollectionViewCell: UICollectionViewCell {
+public class CollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet var contentBackgroundView: UIView!
-    @IBOutlet var titleLabel: UILabel!
+    // MARK: - Outlets
+    @IBOutlet private var contentBackgroundView: UIView!
+    @IBOutlet private var titleLabel: UILabel!
     
-    override func awakeFromNib() {
+    // MARK: - Initialization
+    override public func awakeFromNib() {
         super.awakeFromNib()
         let cornerRadius = contentBackgroundView.frame.height / 2
         contentBackgroundView.layer.cornerRadius = cornerRadius
-        contentBackgroundView.backgroundColor = .systemCyan
     }
     
+    // MARK: - Public
     public func configure(with model: ScrollableModel) {
         titleLabel.text = model.sectionName
     }

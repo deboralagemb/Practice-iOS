@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ScrollableModel {
+public struct ScrollableModel {
     var sectionName: String
     var sectionContent: [SectionContentModel]
     
@@ -17,7 +17,7 @@ struct ScrollableModel {
     }
 }
 
-struct SectionContentModel {
+public struct SectionContentModel {
     var content: String
 
     init(content: String) {
