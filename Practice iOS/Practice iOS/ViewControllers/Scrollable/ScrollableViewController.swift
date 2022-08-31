@@ -26,15 +26,17 @@ class ScrollableViewController: UIViewController {
     }
     
     private func configureTableView() {
+        let nib = UINib(nibName: "TableViewCell", bundle: nil)
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(TableViewCell.self, forCellReuseIdentifier: tableCellIdentifier)
+        tableView.register(nib, forCellReuseIdentifier: tableCellIdentifier)
     }
     
     private func configureCollectionView() {
+        let nib = UINib(nibName: "CollectionViewCell", bundle: nil)
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: collectionCellIdentifier)
+        collectionView.register(nib, forCellWithReuseIdentifier: collectionCellIdentifier)
     }
 }
 
@@ -54,7 +56,9 @@ extension ScrollableViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: tableCellIdentifier, for: indexPath) as? TableViewCell else { return UITableViewCell() }
-        cell.backgroundColor = .systemGreen
+        let row = indexPath.row
+        let section = indexPath.section
+        cell.configure(with: dataSource[section].sectionContent[row])
         return cell
     }
 }
@@ -67,8 +71,15 @@ extension ScrollableViewController: UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionCellIdentifier, for: indexPath) as? CollectionViewCell else { return UICollectionViewCell() }
-        cell.backgroundColor = .systemBlue
+        let row = indexPath.row
+        cell.configure(with: dataSource[row])
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let section = indexPath.row
+        tableView.scrollToRow(at: IndexPath(row: 0, section: section), at: .top, animated: true)
+        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
     }
 }
 
