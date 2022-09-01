@@ -80,8 +80,13 @@ extension ScrollableViewController: UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let section = indexPath.row
+        for (itemIndex, _) in dataSource.enumerated() {
+            dataSource[itemIndex].isSelected = false
+        }
+        dataSource[section].isSelected = true
         tableView.scrollToRow(at: IndexPath(row: 0, section: section), at: .top, animated: true)
         collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        collectionView.reloadData()
     }
 }
 
@@ -95,14 +100,32 @@ extension ScrollableViewController {
         let sectionContent5 = SectionContentModel(content: "Shrimp slaw")
         let content = [sectionContent1, sectionContent2, sectionContent3, sectionContent4, sectionContent5]
         
-        dataSource.append(ScrollableModel(sectionName: "Platters", sectionContent: content))
-        dataSource.append(ScrollableModel(sectionName: "Sandwiches & wraps", sectionContent: content))
-        dataSource.append(ScrollableModel(sectionName: "Family meals", sectionContent: content))
-        dataSource.append(ScrollableModel(sectionName: "Salads & soup", sectionContent: content))
-        dataSource.append( ScrollableModel(sectionName: "Kids meals", sectionContent: content))
-        dataSource.append(ScrollableModel(sectionName: "Drinks", sectionContent: content))
-        dataSource.append(ScrollableModel(sectionName: "Side dishes", sectionContent: content))
-        dataSource.append(ScrollableModel(sectionName: "Desserts", sectionContent: content))
-        dataSource.append(ScrollableModel(sectionName: "Party bundles", sectionContent: content))
+        dataSource.append(ScrollableModel(sectionName: "Platters",
+                                          sectionContent: content,
+                                          isSelected: false))
+        dataSource.append(ScrollableModel(sectionName: "Sandwiches & wraps",
+                                          sectionContent: content,
+                                          isSelected: false))
+        dataSource.append(ScrollableModel(sectionName: "Family meals",
+                                          sectionContent: content,
+                                          isSelected: false))
+        dataSource.append(ScrollableModel(sectionName: "Salads & soup",
+                                          sectionContent: content,
+                                          isSelected: false))
+        dataSource.append( ScrollableModel(sectionName: "Kids meals",
+                                           sectionContent: content,
+                                           isSelected: false))
+        dataSource.append(ScrollableModel(sectionName: "Drinks",
+                                          sectionContent: content,
+                                          isSelected: false))
+        dataSource.append(ScrollableModel(sectionName: "Side dishes",
+                                          sectionContent: content,
+                                          isSelected: false))
+        dataSource.append(ScrollableModel(sectionName: "Desserts",
+                                          sectionContent: content,
+                                          isSelected: false))
+        dataSource.append(ScrollableModel(sectionName: "Party bundles",
+                                          sectionContent: content,
+                                          isSelected: false))
     }
 }

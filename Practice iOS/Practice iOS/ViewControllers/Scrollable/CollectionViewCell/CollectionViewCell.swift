@@ -23,6 +23,7 @@ public class CollectionViewCell: UICollectionViewCell {
     // MARK: - Public
     public func configure(with model: ScrollableModel) {
         titleLabel.text = model.sectionName
+        contentBackgroundView.backgroundColor = model.isSelected ? .systemBlue : .systemCyan
     }
 
 }

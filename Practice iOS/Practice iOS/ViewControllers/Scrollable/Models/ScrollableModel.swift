@@ -10,10 +10,12 @@ import Foundation
 public struct ScrollableModel {
     var sectionName: String
     var sectionContent: [SectionContentModel]
+    var isSelected: Bool
     
-    init(sectionName: String, sectionContent: [SectionContentModel]) {
+    init(sectionName: String, sectionContent: [SectionContentModel], isSelected: Bool) {
         self.sectionName = sectionName
         self.sectionContent = sectionContent
+        self.isSelected = isSelected
     }
 }
 
