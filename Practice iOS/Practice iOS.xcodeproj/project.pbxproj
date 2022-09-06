@@ -22,6 +22,7 @@
 		D5342EAF28BEF9A500360C31 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5342EAD28BEF9A500360C31 /* TableViewCell.xib */; };
 		D5342EB428BEF9CA00360C31 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5342EB228BEF9CA00360C31 /* CollectionViewCell.swift */; };
 		D5342EB528BEF9CA00360C31 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5342EB328BEF9CA00360C31 /* CollectionViewCell.xib */; };
+		D577224428C6EA62004CE37E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D577224328C6EA62004CE37E /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		D5342EAD28BEF9A500360C31 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		D5342EB228BEF9CA00360C31 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		D5342EB328BEF9CA00360C31 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		D577224328C6EA62004CE37E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 				D5342E7A28BEED2E00360C31 /* RootViewController.swift */,
 				D5342E7C28BEED2E00360C31 /* Main.storyboard */,
 				D5342EA728BEF48500360C31 /* Scrollable */,
+				D577224128C6EA2D004CE37E /* Map kit */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -191,6 +194,14 @@
 				D5342E7F28BEED3000360C31 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		D577224128C6EA2D004CE37E /* Map kit */ = {
+			isa = PBXGroup;
+			children = (
+				D577224328C6EA62004CE37E /* SearchViewController.swift */,
+			);
+			path = "Map kit";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,6 +339,7 @@
 			files = (
 				D5342EAB28BEF63600360C31 /* ScrollableModel.swift in Sources */,
 				D5342E7B28BEED2E00360C31 /* RootViewController.swift in Sources */,
+				D577224428C6EA62004CE37E /* SearchViewController.swift in Sources */,
 				D5342E7728BEED2E00360C31 /* AppDelegate.swift in Sources */,
 				D5342EB428BEF9CA00360C31 /* CollectionViewCell.swift in Sources */,
 				D5342EAE28BEF9A500360C31 /* TableViewCell.swift in Sources */,

@@ -32,14 +32,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kt1-Oz-AC3">
-                                <rect key="frame" x="20" y="432.5" width="374" height="31"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kt1-Oz-AC3">
+                                <rect key="frame" x="20" y="412" width="374" height="72"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nRQ-mi-h6W">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="31"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Scrollable something"/>
                                         <connections>
                                             <segue destination="rbH-Wn-L0y" kind="show" id="5wb-bO-mv2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1qE-C8-ai3">
+                                        <rect key="frame" x="0.0" y="41" width="374" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Map kit search"/>
+                                        <connections>
+                                            <segue destination="nUM-dX-2Vo" kind="show" id="Onr-JC-i0M"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -57,7 +65,34 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HIt-O8-fkB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="159" y="-699"/>
+            <point key="canvasLocation" x="157.97101449275362" y="-699.10714285714278"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="lrR-4k-UPX">
+            <objects>
+                <viewController id="nUM-dX-2Vo" customClass="SearchViewController" customModule="Practice_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hkb-zS-Jut">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ZZz-gi-TD2">
+                                <rect key="frame" x="0.0" y="88" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zXm-Hg-F20"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZZz-gi-TD2" firstAttribute="top" secondItem="zXm-Hg-F20" secondAttribute="top" id="7i3-Pg-Cah"/>
+                            <constraint firstItem="ZZz-gi-TD2" firstAttribute="trailing" secondItem="zXm-Hg-F20" secondAttribute="trailing" id="BIk-Pr-bpP"/>
+                            <constraint firstItem="ZZz-gi-TD2" firstAttribute="leading" secondItem="zXm-Hg-F20" secondAttribute="leading" id="b2P-6G-ycB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7Hn-Ol-823"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3VK-uY-52n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="998" y="-364"/>
         </scene>
         <!--Scrollable View Controller-->
         <scene sceneID="hNx-mr-gTi">
